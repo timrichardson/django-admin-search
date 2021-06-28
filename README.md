@@ -43,11 +43,12 @@ If you use or like the project, click `Star` and `Watch` to generate metrics and
 
 3. In your admin:
     ```
+    from django.contrib import admin
     from django_admin_search.admin import AdvancedSearchAdmin
     from .models import YourModel
     from .form import YourForm, YourFormSearch
 
-    @register(YourModel)
+    @admin.register(YourModel)
     class YourAdmin(AdvancedSearchAdmin):
         form = YourForm
         search_form = YourFormSearch
